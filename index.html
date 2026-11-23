@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Jomar Auditor — aspiring cloud support engineer based in Quezon City. AWS re/Start graduate and AWS AI & ML scholar.">
+  <meta name="theme-color" content="#F7F9FC" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#07112B" media="(prefers-color-scheme: dark)">
+  <title>Jomar Auditor — Cloud Support Portfolio</title>
+
+  <!-- Run before paint so the page never flashes the wrong theme -->
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem("theme"); } catch (e) {}
+      var dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.setAttribute("data-bs-theme", saved || (dark ? "dark" : "light"));
+    })();
+  </script>
+
+  <!-- Google Fonts: Inter for UI, Newsreader for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 and Bootstrap Icons 1.11.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#siteNav" data-bs-root-margin="-40% 0px -55% 0px" tabindex="0">
+
+  <nav class="navbar navbar-expand-lg fixed-top site-nav" id="siteNav">
+    <div class="container">
+      <a class="navbar-brand brand" href="#home">Jomar Auditor</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks"
+              aria-controls="navLinks" aria-expanded="false" aria-label="Open menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLinks">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#goals">Goals</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-2">
+            <button id="themeBtn" class="btn btn-ghost btn-sm px-2" type="button" aria-label="Toggle light and dark mode">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+  <header id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-7">
+          <p class="hero-eyebrow rise" style="--i:0">Based in Quezon City, Philippines</p>
+          <h1 class="hero-name">
+            <span class="rise" style="--i:1">Jomar</span>
+            <span class="name-last rise" style="--i:2">Auditor</span>
+          </h1>
+          <p class="hero-role rise" style="--i:3">Aspiring Cloud Support Engineer</p>
+          <p class="hero-lead rise" style="--i:4">
+            Third-year BSIT student, AWS re/Start graduate, and AWS AI &amp; ML scholar.
+            I learn by building — from Linux labs to real web projects with Supabase and Vercel.
+          </p>
+          <div class="hero-badges rise" style="--i:5">
+            <span class="badge-pill"><span class="dot"></span>AWS re/Start Graduate</span>
+            <span class="badge-pill"><span class="dot"></span>AWS AI &amp; ML Scholar</span>
+            <span class="badge-pill"><span class="dot"></span>Open to Work</span>
+          </div>
+          <div class="d-flex flex-wrap gap-2 rise" style="--i:6">
+            <a href="#projects" class="btn btn-sun btn-lg">View my projects</a>
+            <a href="files/Jomar_Auditor_Resume.pdf" class="btn btn-ghost btn-lg" download>Download Resume</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 offset-lg-1">
+          <div class="portrait rise" style="--i:4">
+            <div class="portrait-frame">
+              <span class="portrait-initials" aria-hidden="true">JA</span>
+              <!-- Place your photo at images/profile.jpg; the initials show as fallback -->
+              <img src="images/profile.jpg" alt="Jomar Auditor" onerror="this.remove()">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Short highlight band right below the hero -->
+  <div class="proof" aria-label="Quick highlights">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-4">
+          <div class="proof-item">
+            <div class="proof-icon"><i class="bi bi-check2-circle"></i></div>
+            <p><strong>AWS re/Start Graduate.</strong> Completed the 12-week sponsored cloud program with AWS, Capgemini, and Synchrony.</p>
+          </div>
+        </div>
+        <div class="proof-divider col-auto d-none d-md-block" style="height:3.5rem;"></div>
+        <div class="col-md-4">
+          <div class="proof-item">
+            <div class="proof-icon"><i class="bi bi-award-fill"></i></div>
+            <p><strong>AWS AI &amp; ML Scholar.</strong> Selected from over 100,000 applicants across Southeast Asia.</p>
+          </div>
+        </div>
+        <div class="proof-divider col-auto d-none d-md-block" style="height:3.5rem;"></div>
+        <div class="col-md-3">
+          <div class="proof-item">
+            <div class="proof-icon"><i class="bi bi-journals"></i></div>
+            <p><strong>Studying now:</strong> AWS Certified Cloud Practitioner (CLF-C02).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="about" class="block">
+    <div class="container">
+      <div class="row gy-5">
+        <div class="col-lg-6">
+          <p class="section-label">About me</p>
+          <h2 class="block-title">Learning cloud by doing, not just reading.</h2>
+          <div class="reading">
+            <p>I started in IT with the BSIT program at New Era University. I am drawn to the infrastructure side — the servers, databases, and cloud services that keep everything running.</p>
+            <p>In 2026, I completed two AWS-sponsored programs. In re/Start I worked through hands-on labs in Linux, Python, networking, security, and core AWS services. In the AWS AI &amp; ML Scholars Nanodegree I built generative AI apps using PartyRock and completed a data analysis project.</p>
+            <p>I am looking to start in a cloud support or junior cloud role, learn from an experienced team, and keep building projects on the side.</p>
+          </div>
+        </div>
+        <div class="col-lg-5 offset-lg-1">
+          <dl class="facts mt-lg-5">
+            <div><dt>Completed</dt><dd>AWS re/Start and AWS AI &amp; ML Scholars — Aug to Nov 2026</dd></div>
+            <div><dt>Studying for</dt><dd>AWS Certified Cloud Practitioner (CLF-C02)</dd></div>
+            <div><dt>Looking for</dt><dd>Cloud support, junior cloud, and DevOps support roles — remote or hybrid</dd></div>
+            <div><dt>Location</dt><dd>Quezon City, Philippines</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="block block-alt">
+    <div class="container">
+      <p class="section-label">Skills</p>
+      <h2 class="block-title">What I work with</h2>
+      <p class="block-intro">Select a category to see what I have actually done with each tool.</p>
+      <div class="d-flex flex-wrap gap-2 mb-4" id="skillTabs" role="group" aria-label="Skill categories">
+        <button type="button" class="btn btn-tab active" data-group="Cloud" aria-pressed="true">Cloud &amp; Linux</button>
+        <button type="button" class="btn btn-tab" data-group="Code" aria-pressed="false">Programming</button>
+        <button type="button" class="btn btn-tab" data-group="Data" aria-pressed="false">Databases &amp; Data</button>
+        <button type="button" class="btn btn-tab" data-group="AI" aria-pressed="false">AI</button>
+      </div>
+      <ul class="skill-list" id="skillList"></ul>
+    </div>
+  </section>
+
+  <section id="education" class="block">
+    <div class="container">
+      <p class="section-label">Education</p>
+      <h2 class="block-title">Academic background</h2>
+      <div class="row gy-5">
+        <div class="col-lg-6">
+          <h3 class="item-title">BS Information Technology</h3>
+          <p class="muted mb-0">New Era University, Quezon City</p>
+          <p class="muted" style="font-size:.9rem;">August 2024 – 2028 (expected)</p>
+          <h3 class="item-title mt-4">Senior High School — STEM</h3>
+          <p class="muted mb-0">South East-Asia Institute of Trade &amp; Technology, Inc.</p>
+          <p class="muted" style="font-size:.9rem;">July 2022 – April 2024 &middot; Graduated with high honors</p>
+        </div>
+        <div class="col-lg-5 offset-lg-1">
+          <h3 class="item-title mb-3">Subjects I do well in</h3>
+          <dl class="facts">
+            <div><dt>Information Management</dt><dd>How databases are designed and used</dd></div>
+            <div><dt>Web Development</dt><dd>Building and deploying websites</dd></div>
+            <div><dt>Data Structures &amp; Algorithms</dt><dd>Breaking problems into logical steps</dd></div>
+            <div><dt>Human-Computer Interaction</dt><dd>Designing things that are easy to use</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="block block-alt">
+    <div class="container">
+      <p class="section-label">Experience</p>
+      <h2 class="block-title">Programs &amp; work history</h2>
+      <ol class="timeline">
+        <li>
+          <span class="when">Aug – Nov 2026</span>
+          <h3 class="item-title">AWS re/Start Graduate &middot; Edukasyon.ph</h3>
+          <p class="muted mb-0" style="font-size:.9rem;">With AWS, Capgemini, and Synchrony &middot; Hybrid &middot; Completed</p>
+          <ul>
+            <li>12-week fully sponsored cloud computing program.</li>
+            <li>Scenario-based labs in Linux, Python, networking, security, and relational databases.</li>
+            <li>Configured S3 and IAM, and automated manual tasks on AWS.</li>
+          </ul>
+        </li>
+        <li>
+          <span class="when">Aug – Nov 2026</span>
+          <h3 class="item-title">AWS AI &amp; ML Scholar &middot; Udacity</h3>
+          <p class="muted mb-0" style="font-size:.9rem;">Agentic AI Business Professional Nanodegree &middot; Remote &middot; Completed</p>
+          <ul>
+            <li>Built generative AI apps with AWS PartyRock.</li>
+            <li>Completed a data analysis project and earned the AWS Scholars Project Badge.</li>
+          </ul>
+        </li>
+        <li>
+          <span class="when">Internship</span>
+          <h3 class="item-title">Front-End AI Engineering Intern &middot; FlyRank AI</h3>
+          <p class="muted mb-0" style="font-size:.9rem;">Remote &middot; Chicago, USA</p>
+          <ul><li>Contributing to front-end AI engineering work with a distributed international team.</li></ul>
+        </li>
+        <li>
+          <span class="when">Feb – Mar 2026</span>
+          <h3 class="item-title">Data Entry Specialist &middot; MCVO Talent Outsourcing Services</h3>
+          <p class="muted mb-0" style="font-size:.9rem;">Remote contract</p>
+          <ul><li>Cleaned and validated large datasets in CRM tools and Excel to keep reports accurate.</li></ul>
+        </li>
+        <li>
+          <span class="when">Mar – Apr 2024</span>
+          <h3 class="item-title">Teaching Assistant Intern &middot; Dona Juana Elementary School</h3>
+          <p class="muted mb-0" style="font-size:.9rem;">National Capital Region</p>
+          <ul><li>Organized student data and grading records; ensured reports stayed accurate.</li></ul>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="projects" class="block">
+    <div class="container">
+      <p class="section-label">Projects</p>
+      <h2 class="block-title">Things I have built</h2>
+
+      <article class="feature mb-4">
+        <div class="row gy-4 align-items-start">
+          <div class="col-lg-7">
+            <p class="feature-label">Featured project</p>
+            <h3 class="feature-title">ChemScan</h3>
+            <p class="feature-stack"><i class="bi bi-code-slash me-1"></i>HTML &middot; CSS &middot; JavaScript &middot; Supabase &middot; Vercel</p>
+            <p class="reading mb-4">A QR code inventory system for school science labs. Scan any bottle to instantly see what it is, which shelf it belongs on, its hazard information, and first aid steps. Lab admins log in to add chemicals and generate new QR codes.</p>
+            <a href="https://github.com/JomarAuditor/chemscan" target="_blank" rel="noopener" class="btn btn-sun">
+              <i class="bi bi-github me-1"></i>View code on GitHub
+            </a>
+          </div>
+          <div class="col-lg-4 offset-lg-1">
+            <p class="muted mb-2" style="font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;">How it works</p>
+            <ol class="steps">
+              <li><div><strong>Register.</strong> Admin adds a chemical and receives a QR code.</div></li>
+              <li><div><strong>Print.</strong> The code is attached to the bottle.</div></li>
+              <li><div><strong>Scan.</strong> Any phone shows shelf, hazards, and first aid.</div></li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <article class="project">
+            <h3 class="item-title">NEU Library Visitor Log</h3>
+            <p>A digital visitor log system for the New Era University library.</p>
+            <span class="project-tech">TypeScript</span>
+            <a href="https://github.com/JomarAuditor/neu-library-visitor-log" target="_blank" rel="noopener" class="d-block mt-3">
+              <i class="bi bi-github me-1"></i>View on GitHub
+            </a>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="project">
+            <h3 class="item-title">HOPE Inc. CMS</h3>
+            <p>A content management system built for HOPE Inc.</p>
+            <span class="project-tech">JavaScript</span>
+            <a href="https://github.com/HOPE-INC-CMS-PROJECT/CMS" target="_blank" rel="noopener" class="d-block mt-3">
+              <i class="bi bi-github me-1"></i>View on GitHub
+            </a>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="project">
+            <h3 class="item-title">Lumi</h3>
+            <p>A JavaScript project. Working on a full description soon.</p>
+            <span class="project-tech">JavaScript</span>
+            <a href="https://github.com/JomarAuditor/lumi" target="_blank" rel="noopener" class="d-block mt-3">
+              <i class="bi bi-github me-1"></i>View on GitHub
+            </a>
+          </article>
+        </div>
+      </div>
+
+      <p class="mt-4 mb-0" style="font-size:.95rem;">
+        <a href="https://github.com/JomarAuditor" target="_blank" rel="noopener">
+          <i class="bi bi-github me-1"></i>See all repositories on GitHub
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <section id="certifications" class="block block-alt">
+    <div class="container">
+      <p class="section-label">Certifications</p>
+      <h2 class="block-title">Certifications &amp; badges</h2>
+
+      <!-- Credly embeds are injected by their script into these divs -->
+      <div class="d-flex flex-wrap gap-4 justify-content-center mb-5 credly-badges">
+        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="7f6ee889-fe75-40d3-bbeb-a58ec3e68dd4" data-share-badge-host="https://www.credly.com"></div>
+        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="8d68c079-9e5c-414a-9000-167d7b6bcd94" data-share-badge-host="https://www.credly.com"></div>
+      </div>
+
+      <div class="d-flex flex-wrap gap-2 mb-4" id="certTabs" role="group" aria-label="Filter certifications">
+        <button type="button" class="btn btn-tab active" data-group="all" aria-pressed="true">All</button>
+        <button type="button" class="btn btn-tab" data-group="Cloud" aria-pressed="false">Cloud</button>
+        <button type="button" class="btn btn-tab" data-group="Data" aria-pressed="false">Data</button>
+        <button type="button" class="btn btn-tab" data-group="AI" aria-pressed="false">AI</button>
+      </div>
+      <ul class="cert-list" id="certList"></ul>
+    </div>
+  </section>
+
+  <section id="goals" class="block">
+    <div class="container">
+      <p class="section-label">Goals</p>
+      <h2 class="block-title">Where I am headed</h2>
+      <p class="block-intro">My target is a <strong>Cloud Support Associate</strong> or <strong>Junior Cloud Engineer</strong> role, with DevOps support as a close second.</p>
+      <ol class="roadmap">
+        <li>
+          <strong>Now</strong>
+          Finish AWS re/Start and pass the AWS Certified Cloud Practitioner exam.
+        </li>
+        <li>
+          <strong>Next</strong>
+          Study for AWS Solutions Architect Associate and keep practicing in hands-on labs.
+        </li>
+        <li>
+          <strong>Then</strong>
+          Join a cloud support team and learn automation and DevOps tools on the job.
+        </li>
+        <li>
+          <strong>Later</strong>
+          Grow into a cloud engineer or cloud architect role.
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact" class="block block-navy">
+    <div class="container">
+      <div class="row gy-5">
+        <div class="col-lg-6">
+          <p class="section-label" style="color:var(--sun);opacity:.8;">Get in touch</p>
+          <h2 class="contact-title">Hiring for a cloud support role? Let us talk.</h2>
+          <p class="contact-lead">I am open to internships, junior roles, and volunteer work in cloud, DevOps, or IT support.</p>
+          <a class="contact-mail" href="mailto:jomarskiee1121@gmail.com">jomarskiee1121@gmail.com</a>
+          <ul class="contact-links">
+            <li>
+              <a href="https://www.linkedin.com/in/jomar-auditor-860622335" target="_blank" rel="noopener">
+                <i class="bi bi-linkedin"></i> LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/JomarAuditor" target="_blank" rel="noopener">
+                <i class="bi bi-github"></i> GitHub
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-5 offset-lg-1">
+          <form id="contactForm" novalidate>
+            <div class="mb-3">
+              <label for="name" class="form-label">Your name</label>
+              <input type="text" class="form-control" id="name" autocomplete="name" placeholder="Jane Smith" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Your email</label>
+              <input type="email" class="form-control" id="email" autocomplete="email" autocapitalize="none" placeholder="jane@example.com" required>
+              <div class="invalid-feedback">Enter a valid email address.</div>
+            </div>
+            <div class="mb-4">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Hi Jomar, I would like to..." required></textarea>
+              <div class="invalid-feedback">Please write a short message.</div>
+            </div>
+            <button type="submit" class="btn btn-sun">
+              <i class="bi bi-send me-1"></i>Send message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container d-flex flex-wrap justify-content-between gap-2">
+      <span>&copy; <span id="year"></span> Jomar Auditor</span>
+      <span>Built with HTML, Bootstrap 5 &amp; JavaScript</span>
+    </div>
+  </footer>
+
+  <script async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
